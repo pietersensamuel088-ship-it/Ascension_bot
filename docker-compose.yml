@@ -1,0 +1,9 @@
+services:
+  ascension-bot:
+    build: .
+    container_name: ascension_smp_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
